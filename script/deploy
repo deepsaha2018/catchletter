@@ -1,11 +1,8 @@
 #!/bin/sh
 ssh development@192.168.1.54 <<EOF
-
  cd ~/catchletter
  git pull
  npm install
- pm2 stop app.js
- pm2 start app.js
  pm2 restart all
  exit
 EOF
